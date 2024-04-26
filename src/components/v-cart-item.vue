@@ -1,25 +1,44 @@
 <template>
+  <div>
     <div class="v-cart-item">
-      <vCatalog/>
-      <vCart/>
+      <img class="v-cart-item__img" :src="require('../assets/images/' + cart_item_data.image)" alt=""/>
+      <div>
+      <p class="v-catalog-item__name">{{cart_item_data.name}}</p>
+      <p class="v-catalog-item__price">{{cart_item_data.price}}</p>
+      <p class="v-catalog-item__price">{{cart_item_data.article}}</p>
+      <p class="v-catalog-item__about">{{cart_item_data.about}}</p>
+      </div>
     </div>
+    <div class="v-cart-item__quantity">
+      <p>Quantity</p>
+      <span>{{cart_item_data.quantity}}</span>
+    </div>
+    <button @click="deleteFromCart">Delete</button>
+  </div>
   </template>
   
   <script>
-  import vCatalog from "./v-catalog.vue";
-  import vCart from "./v-cart.vue";
-  
   export default {
     name:"v-cart-item",
-    components:{vCatalog,vCart},
-    props:{},
+    props:{
+      cart_item_data:{
+        type: Object,
+        default(){
+          return{};
+        },
+      },
+    },
     data(){
       return {
-        title:"WrapperHello",
+        title:"CartItemHello",
       };
     },
     computed:{},
-    methods:{},
+    methods:{
+      deleteFromCart(){
+        this.$emit("deleteFromCart");
+      },
+    },
     watch:{},
     mounted(){
       console.log("hello log");
@@ -37,5 +56,8 @@
     box-shadow: 0 0 8px 0 grey;
     padding: 20px;
     margin: 20px;
+    &__img{
+      max-width: 100%;
+    }
   }
   </style>
