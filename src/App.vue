@@ -25,12 +25,15 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background:#ddd;
 }
 a{
   color: black;
 }
 html{
-  background:#ddd;
+  min-height: 100%;
+  background-image: linear-gradient( 135deg, #e4c8ff 10%, #a9a1fa 100%);
+}
+.bigfont{
+  font-family: 'Courier New', Courier, monospace;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="v-cart">
     <router-link :to="{ name: 'catalog'}">
-      <h1>Cart</h1>
+      <h1 class="bigfont">Cart</h1>
       <div class="v-catalog__link_to_cart">
         <i class="small material-icons">shopping_cart</i>
         {{ CART.length }}</div>
@@ -56,7 +56,7 @@ export default {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  color: grey;
+  color: black;
   font-size: 20px;
   margin-bottom: 40px;
 }

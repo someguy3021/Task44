@@ -1,7 +1,7 @@
 <template>
   <div class="v-catalog">
     <router-link :to="{name:'cart',params:{cart_data:CART}}">
-      <h1>Catalog</h1>
+      <h1 class="bigfont">Catalog</h1>
       <div class="v-catalog__link_to_cart">cart:{{ CART.length }}</div>
     </router-link>
     <div class="v-catalog__list">
