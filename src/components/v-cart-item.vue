@@ -2,17 +2,19 @@
   <div>
     
     <div class="v-cart-item">
-      <img class="v-cart-item__img" :src="require('../assets/images/' + cart_item_data.image)" alt=""/>
+      <div><img class="v-cart-item__img" :src="require('../assets/images/' + cart_item_data.image)" alt=""/></div>
       <div>
-      <p class="v-catalog-item__name">{{cart_item_data.name}}</p>
-      <p class="v-catalog-item__price">{{cart_item_data.price}}</p>
-      <p class="v-catalog-item__price">{{cart_item_data.article}}</p>
-      <p class="v-catalog-item__about">{{cart_item_data.about}}</p>
+        <div>
+        <p class="v-catalog-item__name">{{cart_item_data.name}}</p>
+        <p class="v-catalog-item__price">{{cart_item_data.price}}</p>
+        <p class="v-catalog-item__price">{{cart_item_data.article}}</p>
+        <p class="v-catalog-item__about">{{cart_item_data.about}}</p>
+      </div>
       </div>
       <div class="v-cart-item__quantity">
-      <p>Quantity</p>
-      <span>{{cart_item_data.quantity}}</span>
-    </div>
+        <p>Quantity</p>
+        <span>{{cart_item_data.quantity}}</span>
+      </div>
     <button @click="deleteFromCart" class="waves-effect waves-light btn">Delete</button>
     </div>
 
