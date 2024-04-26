@@ -3,7 +3,7 @@
     <router-link :to="{ name: 'catalog'}">
       <h1>Cart</h1>
       <div class="v-catalog__link_to_cart">
-        <i class="medium material-icons">shopping_cart</i>
+        <i class="small material-icons">shopping_cart</i>
         {{ CART.length }}</div>
       <button class="waves-effect waves-light btn">Back to Catalog</button>
     </router-link>

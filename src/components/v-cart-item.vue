@@ -13,7 +13,7 @@
       <p>Quantity</p>
       <span>{{cart_item_data.quantity}}</span>
     </div>
-    <button @click="deleteFromCart">Delete</button>
+    <button @click="deleteFromCart" class="waves-effect waves-light btn">Delete</button>
     </div>
 
   </div>
@@ -56,6 +56,8 @@
     align-items: center;
     flex-basis: 25%;
     box-shadow: 0 0 8px 0 grey;
+    background-color:#fff;
+    border-radius: 5px;
     padding: 20px;
     margin: 20px;
     &__img{
